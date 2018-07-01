@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style media="screen">
+        body {
+            background-color: #333;
+        }
+        
+        #preloader {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -100px;
+            margin-top: -100px;
+            /*background-color: cyan;*/
+        }
+        
+        #preloader .led {
+            width: 200px;
+            height: 50px;
+            /*background-color: blue;*/
+            position: absolute;
+            top: 75px;
+            text-align: center;
+            letter-spacing: 5px;
+            overflow: hidden;
+            color: #00ff00;
+            text-shadow: 0px 0px 15px #00ff00;
+        }
+        
+        #preloader .led::before {
+            content: "\25FB\25FB\25FB\25FB\25FB\a \25FC\25FB\25FB\25FB\25FB\a \25FC\25FC\25FB\25FB\25FB\a \25FC\25FC\25FC\25FB\25FB\a \25FC\25FC\25FC\25FC\25FB\a \25FC\25FC\25FC\25FC\25FC";
+            font-size: 37px;
+            position: relative;
+            line-height: 1.2em;
+            animation: move 1s infinite;
+            animation-timing-function: steps(6);
+            animation-iteration-count: 10;
+        }
+        
+        @keyframes move {
+            from {
+                top: 0;
+            }
+            to {
+                top: -7.2em;
+            }
+        }
+        
+        #preloader .percent {
+            width: 200px;
+            height: 20px;
+            background-color: transparent;
+            position: absolute;
+            overflow: hidden;
+            top: 120px;
+        }
+        
+        #preloader .digit-0::before {
+            content: "0\a 1\a 2\a 3\a 4\a 5\a 6\a 7\a 8\a 9\a";
+        }
+        
+        #preloader .digit-0 {
+            width: 10px;
+            height: 5px;
+            position: absolute;
+            left: 85px;
+            top: -2px;
+            float: left;
+            line-height: 1.5em;
+            font-family: cursive;
+            animation: firstnumber 10s linear;
+            animation-timing-function: steps(10);
+            animation-duration: -2s;
+            font-family: cursive;
+        }
+        
+        #preloader .digit-1::before {
+            content: "0\a 1\a 2\a 3\a 4\a 5\a 6\a 7\a 8\a 9\a";
+        }
+        
+        #preloader .digit-1 {
+            width: 10px;
+            height: 5px;
+            position: absolute;
+            left: 95px;
+            top: -5;
+            line-height: 1.5em;
+            font-family: cursive;
+            animation: lastnumber 1.0s linear;
+            animation-timing-function: steps(10);
+            animation-iteration-count: 10;
+            animation-duration: -2s;
+        }
+        /*домашка сделать анимацию  10 шагов медленно
+                                10 шагов быстрее приминить туже анимацию  приминить тайминг    */
+        /*1em 'to >1 fontsize'*/
+        /*\25FB kod pustoi i polnii \25FC*/
+        
+        @keyframes lastnumber {
+            from {
+                top: -3px;
+                margin-top: 1px;
+            }
+            to {
+                transition: 0.1s;
+                top: -15em;
+            }
+        }
+        
+        @keyframes firstnumber {
+            from {
+                top: -1px;
+            }
+            to {
+                top: -15em;
+            }
+        }
+        
+        #preloader .digit-100 {
+            width: 10px;
+            height: 5px;
+            position: absolute;
+            left: 78px;
+            top: -1px;
+            line-height: 1.5em;
+            font-family: cursive;
+            animation: m1 10.1s;
+            opacity: 1;
+        }
+        
+        @keyframes m1 {
+            0% {
+                opacity: 1;
+            }
+            1% {
+                opacity: 0;
+            }
+            99% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+                /* transition: 1s; */
+            }
+        }
+        
+        #preloader .procents {
+            width: 10px;
+            height: 5px;
+            position: absolute;
+            left: 105px;
+            top: 0;
+            line-height: 1.5em;
+            font-family: cursive;
+            /* animation: procents 2s linear;
+            animation-iteration-count: 10; */
+        }
+        
+        @keyframes procents {
+            from {
+                opacity: 0.1;
+            }
+            100% {
+                opacity: 2;
+                transition: 0.1s;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="preloader">
+        <div class="led"></div>
+        <div class="percent">
+            <div class="digit-0"></div>
+            <div class="digit-1"></div>
+            <div class="digit-100">1</div>
+            <div class="procents">%</div>
+
+        </div>
+    </div>
+</body>
+
+</html>
