@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body{
+        background-color: rgb(255, 255, 255);
+    }
+  #preloader{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -40px;
+      margin-top: -40px;
+  }
+
+    #preloader div{
+        height: 40px;
+        width: 40px;
+        background-color: rgb(0, 0, 0);
+        border-radius: 20px;
+        float: left;
+        margin-left: 5px;
+        animation: up 1s ease-in-out 1s infinite;
+    } 
+    
+    #preloader div:nth-child(2){
+        height: 40px;
+        width: 40px;
+        background-color: rgb(0, 0, 0);
+        border-radius: 20px;
+        animation: up 1s ease-in-out 0.30s infinite;
+        }
+        #preloader div:nth-child(3){
+        height: 40px;
+        width: 40px;
+        background-color: rgb(0, 0, 0);
+        border-radius: 20px;
+        animation: up 1s ease-in-out 0.50s infinite;
+        }
+        #preloader div:nth-child(4){
+        height: 40px;
+        width: 40px;
+        background-color: rgb(0, 0, 0);
+        border-radius: 20px;
+        animation: up 1s ease-in-out 0.70s infinite;
+        }
+        #preloader div:nth-child(5){
+        height: 40px;
+        width: 40px;
+        background-color: rgb(0, 0, 0);
+        border-radius: 20px;
+        animation: up 1s ease-in-out 0.90s infinite;
+        }
+        @keyframes up 
+        {
+            0%, 100%{
+                transform: translateY(0px);
+                background-color: black;
+                
+            }
+            50%{transform: translateY(30px);
+            background-color: white;}
+        }
+    </style>
+</head>
+<body>
+    <div id="preloader">
+        <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+    </div>
+    </div>
+</body>
+</html>

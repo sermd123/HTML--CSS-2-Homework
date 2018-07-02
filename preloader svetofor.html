@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #preloader  {
+            background-color: chartreuse;
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -100px;
+            margin-top: -100px;
+            border-radius: 100px;
+            animation: pulsate 1.5s ease-out infinite ;
+            }
+            .main-circle{
+                width: 250px;
+                height: 250px;
+            }
+
+            @keyframes pulsate {
+    0% {transform: scale(0.5); opacity: 0.0;}
+    25%{background: violet;}
+    50% { background: red; opacity: 1;}
+
+    75% {background: yellow;}
+
+    100% {transform: scale(1); opacity: 1; background: green;}
+}
+    </style>
+</head>
+<body>
+    <div id="preloader">
+        <div class="main-circle"></div>
+    </div>
+</body>
+</html>

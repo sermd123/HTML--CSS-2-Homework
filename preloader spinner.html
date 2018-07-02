@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        body{
+            background-color: #333;
+        }
+    #preloader{
+        background-color: transparent;
+        width:140px;
+        height: 20px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-left:-75px;
+        /* overflow: hidden; */
+       border-radius: 25px;
+        
+    }
+
+    #preloader div:first-child{
+        padding-left: 5px;
+        position: fixed;
+        width: 20px;
+        height: 20px;
+        color: darkgoldenrod;
+        animation: aa1 5s infinite;
+       
+     
+    }
+               
+
+    #preloader div:nth-child(2){
+        width: 20px;
+        height: 20px;
+        color: darkgoldenrod;
+        position: absolute;
+        top: 0px;
+        left: 20px;
+        animation: aa1 5s infinite;
+        border-radius: 20px;
+        
+        }
+         
+        #preloader div:nth-child(3){
+        width: 20px;
+        height: 20px;
+        color: darkgoldenrod;
+        position: absolute;
+        top:0;
+        left:40px;
+        animation: aa1 5s infinite;    
+        }
+            
+        #preloader div:nth-child(4){
+        width: 20px;
+        height: 20px;
+        color: darkgoldenrod;
+        position: absolute;
+        top: 0px;
+        left: 60px;
+        animation: aa1 5s infinite;
+       }
+        
+        #preloader div:nth-child(5){
+        width: 20px;
+        height: 20px;
+        color: darkgoldenrod;
+        
+        position: absolute;
+        top: 0px;
+        left: 80px;
+        animation: aa1 5s infinite;
+        }
+
+        
+        #preloader div:nth-child(6){
+        width: 20px;
+        height: 20px;
+        color: darkgoldenrod;
+        position: absolute;
+        top: -0px;
+        left: 95px;
+        animation: aa1 5s infinite;
+        }
+
+        
+        #preloader div:nth-child(7){
+        width: 20px;
+        height: 20px;
+        color: darkgoldenrod;
+        position: relative;
+        top: -0px;
+        left: 115px;
+        animation: aa1 5s infinite;
+        }
+        @keyframes aa1{
+            from{transform: scalex(0);transform: skew(0); opacity: 0; color: red;    }
+            to {transform: scalex(1) ; transform: skew(-20deg);  opacity: 1;color: yellow; }
+        }
+
+        @keyframes c1{
+            from{transform: rotate(0); border-color: green;  }
+            25%{ border-color: red;}
+            50% {border-color: blue;}
+            75%{ border-color: yellow;}
+            to {transform: rotate(360deg); border-color: purple;   }
+        }
+.circle{
+    width: 160px;
+    height: 160px;
+    position: relative;
+    top: -80px;
+    left: -10px;
+    background-color: transparent;
+    border-radius: 160px;
+    border-left: 5px dotted transparent;
+    animation: c1 2s infinite linear ;
+}
+
+
+    </style>
+</head>
+<body>
+    <div id="preloader">
+        <div>L</div>
+        <div>O</div>
+        <div>A</div>
+        <div>D</div>
+        <div>I</div>
+        <div>N</div>
+        <div>G</div>
+        <div class="circle"></div>
+    </div>
+   
+</body>
+</html>
